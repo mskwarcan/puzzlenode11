@@ -1,6 +1,9 @@
-<% @total.each do |row| %>
-  <% row.each do |col| %>
-    <%= " " + col %>
-  <% end %>
+<% @graphic.each do |row| %>
+  <% row.size.times do |col| %><%= row[col] %><% if row[col] == " " %>&nbsp;<% end %><% end %>
   <br />
+<% end %>
+<br />
+<br />
+<% @total.each do |row| %>
+  <%= row.to_s + " " %>
 <% end %>
